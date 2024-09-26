@@ -1,0 +1,51 @@
+.form {
+  background-color: aliceblue;
+  padding: 1rem;
+  width: 15rem;
+
+  p {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.05rem;
+    color: black;
+    font-weight: bold;
+  }
+  textarea {
+    height: 60px;
+    border: 2px solid rgb(172, 160, 160);
+    border-radius: 5px;
+  }
+  input {
+    height: 20px;
+    border: 2px solid rgb(181, 177, 177);
+    border-radius: 5px;
+  }
+  input:focus {
+    border-color: black; /* Change the color to your preferred one */
+    outline: none; /* Optionally remove the default outline */
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0.5rem;
+
+    button {
+      cursor: pointer;
+      font: inherit;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      background-color: rgb(232, 223, 214);
+      color: black;
+    }
+    button:hover {
+      background-color: rgb(23, 21, 16);
+      color: wheat;
+    }
+  }
+}

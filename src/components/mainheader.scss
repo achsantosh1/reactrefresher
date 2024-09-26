@@ -1,0 +1,32 @@
+.header{
+    margin: 2rem 10%;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+
+.logo{
+    font-size: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    color: black
+}
+.button{
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    padding: 15px;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+    
+}
+}
