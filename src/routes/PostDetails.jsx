@@ -16,7 +16,7 @@ function PostDetails() {
           <h1>Could not find post</h1>
           <p>Unfortunately, the requested post could not be found.</p>
           <p>
-            <Link to="/" className='btn'>
+            <Link to=".." className='btn'>
               Okay
             </Link>
           </p>
@@ -37,20 +37,9 @@ function PostDetails() {
 
 export default PostDetails;
 
-export async function loader({ params }) {
-    try {
-      const response = await fetch(`http://localhost:8080/posts/${params.postId}`);  // Access the correct param (postId)
-      
-      if (!response.ok) {
-        throw new Error("Post not found");  // Handle non-200 responses
-      }
+export async function loader({params}) {
+  const response = await fetch('http://localhost:8080/posts/' + params.Id);
+  const resData = await response.json();
+  return resData.post;
   
-      const resData = await response.json();
-      
-      return resData.post || null;  // Return null if no post is found in the response
-      
-    } catch (error) {
-      console.error("Error fetching post:", error);
-      return null;  // Return null in case of an error
-    }
-  }
+}
