@@ -4,15 +4,28 @@
     top: 50%;
     left: 50%;
     border: 1px transparent grey;
-    background-color: grey;
+    background-color: rgb(236, 233, 233);
     border-radius: 5px;
+    height: 100px;
+    width: 220px;
+    margin: 20px;
+    
+    .post a{
+        text-decoration: none;
+        
+    }
 
     .author{
         font-size: 35px;
         font-weight: bold;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        
     }
     .text{
         font-size: 20px;
+        text-decoration: none;
 
     }
 }

@@ -1,9 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import "./Model.scss";
 
-const Model = ({onClose, children}) => {
+const Model = ({children}) => {
+
+  const navigate = useNavigate();
+  function closeHandler(){
+    navigate('/');
+
+  }
   return (
     <>
-      <div className="backdrop" onClick={onClose} />
+      <div className="backdrop" onClick={closeHandler} />
       <dialog open className="modal">
         {children}
       </dialog>
